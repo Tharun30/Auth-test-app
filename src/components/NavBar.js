@@ -97,7 +97,7 @@ const NavBar = (props) => {
     <div className="mcafee-navbar">
       <div className="mcafee-navbar-container">
         <Link to="/" className="mcafee-logo">
-          McAfee only
+          McAfee
         </Link>
         
         <nav className="mcafee-nav-links">
