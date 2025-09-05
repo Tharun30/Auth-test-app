@@ -1,0 +1,1157 @@
+/* Modern McAfee Form Components with Dark Mode Support */
+
+/* Input Groups */
+.mcafee-input-group {
+  margin-bottom: 1.5rem;
+}
+
+.mcafee-input-group label {
+  display: block;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color var(--mcafee-transition-base);
+}
+
+/* Input Fields */
+.mcafee-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.mcafee-input:focus {
+  outline: none;
+  border-color: #C8102E;
+  box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.1), var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.mcafee-input::placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.mcafee-input:hover {
+  border-color: #C8102E;
+  box-shadow: var(--shadow-base);
+}
+
+/* Textarea Fields */
+.mcafee-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  resize: vertical;
+  min-height: 120px;
+}
+
+.mcafee-textarea:focus {
+  outline: none;
+  border-color: #C8102E;
+  box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.1), var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.mcafee-textarea::placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+  font-family: inherit;
+}
+
+.mcafee-textarea:hover {
+  border-color: #C8102E;
+  box-shadow: var(--shadow-base);
+}
+
+/* Custom Header with Toggle */
+.mcafee-custom-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.mcafee-custom-header h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+/* Raw JSON Toggle */
+.mcafee-raw-json-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mcafee-toggle-label {
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+}
+
+/* Toggle Switch */
+.mcafee-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.mcafee-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.mcafee-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--border-color);
+  transition: 0.3s;
+  border-radius: 24px;
+}
+
+.mcafee-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--bg-card);
+  transition: 0.3s;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.mcafee-switch input:checked + .mcafee-slider {
+  background-color: #C8102E;
+}
+
+.mcafee-switch input:focus + .mcafee-slider {
+  box-shadow: 0 0 1px #C8102E;
+}
+
+.mcafee-switch input:checked + .mcafee-slider:before {
+  transform: translateX(26px);
+}
+
+/* Select Dropdowns */
+.mcafee-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  /* Remove default browser dropdown arrows */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Default dropdown arrow - will be overridden by dark/light mode */
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+/* Dark mode arrow - use body.dark-mode selector since that's what NavBar applies */
+html body.dark-mode .mcafee-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e") !important;
+  background-position: right 0.5rem center !important;
+  background-repeat: no-repeat !important;
+  background-size: 1.5em 1.5em !important;
+}
+
+/* Light mode arrow - use body.light-mode selector */
+html body.light-mode .mcafee-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e") !important;
+  background-position: right 0.5rem center !important;
+  background-repeat: no-repeat !important;
+  background-size: 1.5em 1.5em !important;
+}
+
+.mcafee-select:focus {
+  outline: none;
+  border-color: #C8102E;
+  box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.1);
+}
+
+/* Toggle Switches - Modern Alternative to Checkboxes */
+.mcafee-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-right: 0.75rem;
+}
+
+.mcafee-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.mcafee-switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--border-color);
+  transition: all 0.3s ease;
+  border-radius: 24px;
+  border: 2px solid var(--border-color);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.mcafee-switch-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: var(--bg-card);
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.mcafee-switch input:checked + .mcafee-switch-slider {
+  background: linear-gradient(135deg, #C8102E 0%, #A50E26 100%);
+  border-color: #C8102E;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(200, 16, 46, 0.1);
+}
+
+.mcafee-switch input:checked + .mcafee-switch-slider:before {
+  transform: translateX(26px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.mcafee-switch-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.mcafee-switch-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.mcafee-switch-item:hover {
+  border-color: #C8102E;
+  background: var(--bg-secondary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-base);
+}
+
+.mcafee-switch-label {
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  user-select: none;
+  flex: 1;
+  transition: color var(--mcafee-transition-base);
+}
+
+.mcafee-switch-item:hover .mcafee-switch-label {
+  color: #C8102E;
+}
+
+/* Checkbox Groups */
+.mcafee-checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.mcafee-checkbox {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.mcafee-checkbox:hover {
+  border-color: #C8102E;
+  background: var(--bg-secondary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-base);
+}
+
+.mcafee-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.75rem;
+  accent-color: #C8102E;
+  cursor: pointer;
+}
+
+.mcafee-checkbox span {
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  user-select: none;
+  transition: color var(--mcafee-transition-base);
+}
+
+.mcafee-checkbox input[type="checkbox"]:checked + span {
+  color: #C8102E;
+  font-weight: 600;
+}
+
+/* Buttons */
+.mcafee-primary-button {
+  background: linear-gradient(135deg, #C8102E 0%, #A50E26 100%);
+  color: white;
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(200, 16, 46, 0.3);
+  width: 100%;
+}
+
+.mcafee-primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(200, 16, 46, 0.4);
+  background: linear-gradient(135deg, #A50E26 0%, #8B0C20 100%);
+}
+
+.mcafee-primary-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(200, 16, 46, 0.3);
+}
+
+/* Config Sections */
+.mcafee-config-section {
+  background: var(--bg-card);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-base);
+  border: 1px solid var(--border-color);
+  transition: background-color var(--mcafee-transition-base), border-color var(--mcafee-transition-base);
+}
+
+.mcafee-config-section h3 {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: border-color var(--mcafee-transition-base), color var(--mcafee-transition-base);
+}
+
+/* Results Display */
+.mcafee-config-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0.75rem;
+}
+
+.mcafee-config-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.75rem;
+  background: var(--bg-tertiary);
+  border-radius: 6px;
+  border-left: 4px solid #C8102E;
+  margin-bottom: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.mcafee-config-item:hover {
+  background: var(--bg-secondary);
+  transform: translateX(2px);
+  box-shadow: var(--shadow-base);
+}
+
+.mcafee-config-key {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  min-width: 120px;
+  text-transform: capitalize;
+  transition: color var(--mcafee-transition-base);
+}
+
+.mcafee-config-value {
+  color: #C8102E;
+  font-weight: 500;
+  background: var(--bg-card);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  flex: 1;
+  margin-left: 0.5rem;
+  border: 1px solid var(--border-color);
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  transition: background-color var(--mcafee-transition-base), border-color var(--mcafee-transition-base);
+}
+
+/* Enhanced AAI Configuration Styles */
+.mcafee-aai-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* Reduced from 1rem */
+}
+
+/* Compact AAI Panel - More aggressive space reduction */
+.mcafee-aai-compact .mcafee-aai-container {
+  gap: 0.25rem; /* Reduced from 0.5rem */
+}
+
+.mcafee-aai-compact .mcafee-aai-section {
+  margin-bottom: 0.25rem; /* Reduced from 0.5rem */
+}
+
+.mcafee-aai-compact .mcafee-aai-content {
+  padding: 0.5rem; /* Reduced from 0.75rem */
+  gap: 0.2rem; /* Reduced from 0.25rem */
+}
+
+.mcafee-aai-compact .mcafee-aai-item {
+  padding: 0.3rem 0.5rem; /* Reduced from 0.4rem 0.6rem */
+}
+
+.mcafee-aai-compact .mcafee-aai-header {
+  padding: 0.4rem 0.6rem; /* Further reduced */
+}
+
+/* AAI Header Controls */
+.mcafee-aai-header-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid currentColor;
+}
+
+.mcafee-aai-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.mcafee-toggle-btn {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mcafee-toggle-btn:hover {
+  background: linear-gradient(135deg, #2980b9 0%, #21618c 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.mcafee-toggle-btn.active {
+  background: linear-gradient(135deg, var(--mcafee-red) 0%, var(--mcafee-red-dark) 100%);
+}
+
+.mcafee-toggle-btn.active:hover {
+  background: linear-gradient(135deg, var(--mcafee-red-dark) 0%, #8b0d1f 100%);
+}
+
+/* AAI JSON Display */
+.mcafee-aai-json {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  max-height: 500px; /* Limit height for better visibility */
+}
+
+.mcafee-aai-json .mcafee-json-content {
+  max-height: 450px;
+  font-size: 0.7rem; /* Smaller font for more content */
+  line-height: 1.3;
+}
+
+.mcafee-aai-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 6px; /* Reduced from 8px */
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  margin-bottom: 0.25rem; /* Reduced for compactness */
+}
+
+.mcafee-aai-section:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.mcafee-aai-section.depth-0 {
+  border-left: 4px solid #3498db;
+}
+
+.mcafee-aai-section.depth-1 {
+  border-left: 4px solid #e74c3c;
+  margin-left: 1rem;
+}
+
+.mcafee-aai-section.depth-2 {
+  border-left: 4px solid #f39c12;
+  margin-left: 2rem;
+}
+
+.mcafee-aai-header {
+  background: var(--bg-secondary);
+  padding: 0.4rem 0.6rem; /* Further reduced */
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color var(--mcafee-transition-base), border-color var(--mcafee-transition-base);
+}
+
+.mcafee-aai-section-title {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  text-transform: capitalize;
+  position: relative;
+  transition: color var(--mcafee-transition-base);
+}
+
+.mcafee-aai-section.depth-0 .mcafee-aai-section-title::before {
+  content: "📁";
+  margin-right: 0.5rem;
+}
+
+.mcafee-aai-section.depth-1 .mcafee-aai-section-title::before {
+  content: "🔧";
+  margin-right: 0.5rem;
+}
+
+.mcafee-aai-section.depth-2 .mcafee-aai-section-title::before {
+  content: "⚙️";
+  margin-right: 0.5rem;
+}
+
+.mcafee-aai-badge {
+  background: var(--mcafee-red);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.mcafee-aai-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--bg-card);
+  border-radius: 0 0 6px 6px;
+  transition: background-color var(--mcafee-transition-base);
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mcafee-aai-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0.5rem; /* Further reduced */
+  background: var(--bg-tertiary);
+  border-radius: 3px; /* Smaller radius */
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+  margin-bottom: 0.1rem; /* Tighter spacing */
+}
+
+.mcafee-aai-item:hover {
+  background: var(--bg-secondary);
+  border-left-color: var(--mcafee-red);
+  transform: translateX(2px);
+}
+
+.mcafee-aai-item.depth-0 {
+  border-left-color: #3498db;
+}
+
+.mcafee-aai-item.depth-1 {
+  border-left-color: #e74c3c;
+}
+
+.mcafee-aai-item.depth-2 {
+  border-left-color: #f39c12;
+}
+
+.mcafee-aai-key {
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 0.75rem; /* Reduced from 0.8rem */
+  min-width: 100px; /* Reduced from 120px */
+  text-transform: capitalize;
+  transition: color var(--mcafee-transition-base);
+}
+
+.mcafee-aai-value {
+  color: var(--mcafee-red);
+  font-weight: 500;
+  background: var(--bg-card);
+  padding: 0.2rem 0.4rem; /* Reduced */
+  border-radius: 3px; /* Smaller radius */
+  font-size: 0.75rem; /* Reduced from 0.8rem */
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  border: 1px solid var(--border-color);
+  max-width: 180px; /* Reduced from 200px */
+  text-align: right;
+  word-break: break-word;
+  transition: background-color var(--mcafee-transition-base), border-color var(--mcafee-transition-base);
+}
+
+/* Special styling for null values */
+.mcafee-aai-value.null-value {
+  color: var(--text-muted) !important;
+  font-style: italic;
+  background: var(--bg-secondary) !important;
+  border-color: var(--border-light) !important;
+}
+
+/* Special styling for empty objects */
+.mcafee-aai-value.empty-object {
+  color: #f39c12 !important;
+  font-style: italic;
+  background: var(--bg-secondary) !important;
+  border-color: var(--border-light) !important;
+}
+
+/* Special styling for arrays */
+.mcafee-aai-value.array-value {
+  color: #9b59b6 !important;
+  background: var(--bg-secondary) !important;
+  border-color: var(--border-light) !important;
+}
+
+/* Responsive Design for AAI */
+@media (max-width: 768px) {
+  .mcafee-aai-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .mcafee-aai-key {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .mcafee-aai-value {
+    max-width: 100%;
+    text-align: left;
+  }
+  
+  .mcafee-aai-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .mcafee-aai-section.depth-1,
+  .mcafee-aai-section.depth-2 {
+    margin-left: 0.5rem;
+  }
+}
+
+/* Nested Configuration Items - Keep for backwards compatibility */
+.mcafee-nested-config {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.mcafee-config-item.mcafee-nested {
+  margin-left: 1rem;
+  border-left: 2px solid var(--border-color);
+  border-radius: 4px;
+  padding: 0.5rem;
+  background: var(--bg-card);
+  transition: background-color var(--mcafee-transition-base), border-color var(--mcafee-transition-base);
+}
+
+.mcafee-config-item.mcafee-nested.depth-0 {
+  margin-left: 0.5rem;
+  border-left-color: #3498db;
+}
+
+.mcafee-config-item.mcafee-nested.depth-1 {
+  margin-left: 1rem;
+  border-left-color: #e74c3c;
+}
+
+.mcafee-config-item.mcafee-nested.depth-2 {
+  margin-left: 1.5rem;
+  border-left-color: #f39c12;
+}
+
+.mcafee-config-item.mcafee-nested .mcafee-config-key {
+  font-size: 0.8rem;
+  min-width: 100px;
+}
+
+.mcafee-config-item.mcafee-nested .mcafee-config-value {
+  font-size: 0.8rem;
+  background: var(--bg-secondary);
+}
+
+/* URL Display */
+.mcafee-url-display {
+  background: #2c3e50;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.mcafee-url-display code {
+  color: #ffffff;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.75rem;
+  word-break: break-all;
+  line-height: 1.5;
+}
+
+/* Empty State */
+.mcafee-empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: var(--text-muted);
+}
+
+.mcafee-empty-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.mcafee-empty-state h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  transition: color var(--mcafee-transition-base);
+}
+
+.mcafee-empty-state p {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Enhanced AAI Display Sections */
+.mcafee-aai-display {
+  margin-bottom: 20px;
+}
+
+.mcafee-aai-section {
+  margin-bottom: 16px;
+  padding: 16px;
+  background: var(--bg-card);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.mcafee-aai-section h4 {
+  margin: 0 0 12px 0;
+  color: var(--mcafee-red);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Enhanced JSON Display */
+.mcafee-json-display {
+  background: var(--mcafee-dark);
+  color: var(--mcafee-white);
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 12px;
+  line-height: 1.4;
+  max-height: 300px;
+  border: 2px solid var(--mcafee-red);
+  margin-top: 12px;
+}
+
+.mcafee-json-display pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Enhanced URL Display */
+.mcafee-url-section {
+  margin-top: 24px;
+}
+
+.mcafee-url-section h3 {
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+/* Section Headers with Emojis */
+.mcafee-results-container h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Results Panel Styles */
+.mcafee-results-panel {
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-base);
+  transition: all 0.3s ease;
+}
+
+.mcafee-results-panel:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-1px);
+}
+
+/* Specific Panel Styles */
+.mcafee-query-panel {
+  border-left: 4px solid #3498db;
+}
+
+.mcafee-query-panel h3 {
+  color: #3498db;
+}
+
+.mcafee-aai-panel {
+  border-left: 4px solid var(--mcafee-red);
+}
+
+.mcafee-aai-panel h3 {
+  color: var(--mcafee-red);
+}
+
+.mcafee-json-panel {
+  border-left: 4px solid #27ae60;
+}
+
+.mcafee-json-panel h3 {
+  color: #27ae60;
+}
+
+.mcafee-results-panel h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid currentColor;
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Empty State for Configuration Panels */
+.mcafee-empty-config {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border: 2px dashed var(--border-color);
+}
+
+/* Enhanced scrollbar styling for specific components */
+.left-panel,
+.right-panel,
+.mcafee-results-panel,
+.mcafee-json-display {
+  scrollbar-width: thin;
+  scrollbar-color: #555 var(--bg-primary);
+}
+
+.left-panel::-webkit-scrollbar,
+.right-panel::-webkit-scrollbar,
+.mcafee-results-panel::-webkit-scrollbar,
+.mcafee-json-display::-webkit-scrollbar {
+  width: 6px;
+}
+
+.left-panel::-webkit-scrollbar-track,
+.right-panel::-webkit-scrollbar-track,
+.mcafee-results-panel::-webkit-scrollbar-track,
+.mcafee-json-display::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 3px;
+}
+
+.left-panel::-webkit-scrollbar-thumb,
+.right-panel::-webkit-scrollbar-thumb,
+.mcafee-results-panel::-webkit-scrollbar-thumb,
+.mcafee-json-display::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 3px;
+  border: 1px solid var(--bg-secondary);
+}
+
+.left-panel::-webkit-scrollbar-thumb:hover,
+.right-panel::-webkit-scrollbar-thumb:hover,
+.mcafee-results-panel::-webkit-scrollbar-thumb:hover,
+.mcafee-json-display::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Environment Indicator Styling */
+.mcafee-environment-indicator {
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.mcafee-env-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.mcafee-env-value {
+  color: var(--mcafee-red);
+  font-weight: 600;
+}
+
+.mcafee-env-domain {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.mcafee-json-display {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mcafee-json-content {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: #ecf0f1;
+  background: transparent;
+  border: none;
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 40px;
+}
+
+.mcafee-copy-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: linear-gradient(135deg, var(--mcafee-red) 0%, var(--mcafee-red-dark) 100%);
+  color: var(--mcafee-white);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.mcafee-copy-icon:hover {
+  background: linear-gradient(135deg, var(--mcafee-red-dark) 0%, #8b0d1f 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.mcafee-copy-icon:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Overrides for Components */
+.dark-mode .mcafee-input,
+.dark-mode .mcafee-select {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+.dark-mode .mcafee-input-group label {
+  color: var(--text-primary);
+}
+
+.dark-mode .mcafee-input::placeholder {
+  color: var(--text-muted);
+}
+
+.dark-mode .mcafee-switch-item,
+.dark-mode .mcafee-checkbox {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+.dark-mode .mcafee-switch-item:hover,
+.dark-mode .mcafee-checkbox:hover {
+  background: var(--bg-secondary);
+}
+
+.dark-mode .mcafee-switch-label,
+.dark-mode .mcafee-checkbox span {
+  color: var(--text-primary);
+}
+
+.dark-mode .mcafee-config-item {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+.dark-mode .mcafee-config-item:hover {
+  background: var(--bg-secondary);
+}
+
+.dark-mode .mcafee-config-label {
+  color: var(--text-primary);
+}
+
+.dark-mode .mcafee-config-value {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+.dark-mode .mcafee-aai-section {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+.dark-mode .mcafee-aai-header {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.dark-mode .mcafee-aai-content {
+  background: var(--bg-card);
+}
+
+.dark-mode .mcafee-aai-item {
+  background: var(--bg-tertiary);
+  border-color: var(--border-light);
+}
+
+.dark-mode .mcafee-aai-item:hover {
+  background: var(--bg-secondary);
+}
+
+.dark-mode .mcafee-aai-key {
+  color: var(--text-primary);
+}
+
+.dark-mode .mcafee-aai-value {
+  color: var(--text-secondary);
+}
+
+.dark-mode .mcafee-json-content {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+/* Value type specific dark mode styling */
+.dark-mode .null-value {
+  color: var(--text-muted);
+}
+
+.dark-mode .empty-object {
+  color: var(--text-muted);
+}
+
+.dark-mode .array-value {
+  color: #3498db;
+}
