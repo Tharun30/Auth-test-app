@@ -1,0 +1,24 @@
+name: Validate Jira Ticket Details
+on: 
+  pull_request:
+  
+jobs:
+ PR_Jira_Validate:
+   env:
+     prtitle: ${{github.event.pull_request.title}}
+     prno: ${{github.event.number}}
+     
+   runs-on: [self-hosted, Windows, X64, PR-Verify]
+   
+   steps:
+     - name: Print PR Details
+       shell: cmd
+       run: |
+         echo "PR TITLE: ${{github.event.pull_request.title}}"
+         echo "PR NO: ${{github.event.number}}"
+         
+     - name: Call Python File
+       shell: cmd
+       run: |
+         python "E:\build-dependencies\scripts\validate_jira.py" ${{env.prno}} ${{github.event.repository.name}}
+         
