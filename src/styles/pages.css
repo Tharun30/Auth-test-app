@@ -1,0 +1,495 @@
+/* McAfee Page Styles */
+.mcafee-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: calc(100vh - 60px);
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.mcafee-page-header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.mcafee-page-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.mcafee-page-icon {
+  color: var(--mcafee-red);
+}
+
+.mcafee-page-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Profile Specific Styles */
+.mcafee-profile-section {
+  display: grid;
+  gap: 30px;
+}
+
+.mcafee-profile-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.dark-mode .mcafee-profile-card {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.mcafee-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.mcafee-profile-avatar {
+  flex-shrink: 0;
+}
+
+.mcafee-profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--mcafee-red);
+}
+
+.mcafee-profile-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--mcafee-red-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 32px;
+}
+
+.mcafee-profile-info {
+  flex: 1;
+}
+
+.mcafee-profile-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 8px 0;
+}
+
+.mcafee-profile-email {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin: 0 0 15px 0;
+}
+
+.mcafee-profile-status {
+  display: flex;
+  gap: 10px;
+}
+
+.mcafee-status-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.mcafee-status-verified {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.mcafee-profile-details {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.mcafee-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.mcafee-section-title .fa-info-circle,
+.mcafee-section-title .fa-code,
+.mcafee-section-title .fa-terminal,
+.mcafee-section-title .fa-check-circle,
+.mcafee-section-title .fa-exclamation-circle {
+  color: var(--mcafee-red);
+}
+
+.mcafee-detail-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.mcafee-detail-item {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 15px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mcafee-detail-item:last-child {
+  border-bottom: none;
+}
+
+.mcafee-detail-item label {
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.mcafee-detail-item span {
+  color: var(--text-primary);
+}
+
+.mcafee-status-success {
+  color: #22c55e !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mcafee-status-warning {
+  color: #f59e0b !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mcafee-raw-data-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 25px;
+}
+
+/* API Page Styles */
+.mcafee-api-section {
+  display: grid;
+  gap: 30px;
+}
+
+.mcafee-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.mcafee-alert-warning {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #f59e0b;
+}
+
+.mcafee-alert-info {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #3b82f6;
+}
+
+.mcafee-alert-success {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #22c55e;
+}
+
+.mcafee-link-button {
+  background: none;
+  border: none;
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+
+.mcafee-api-controls {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.mcafee-input-group {
+  margin-bottom: 20px;
+}
+
+.mcafee-input-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.mcafee-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.mcafee-input:focus {
+  outline: none;
+  border-color: var(--mcafee-red);
+  box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.1);
+}
+
+.mcafee-button-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.mcafee-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.mcafee-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mcafee-button-primary {
+  background: var(--mcafee-red-gradient);
+  color: white;
+}
+
+.mcafee-button-primary:hover:not(:disabled) {
+  background: var(--mcafee-red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(200, 16, 46, 0.3);
+}
+
+.mcafee-button-secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.mcafee-button-secondary:hover:not(:disabled) {
+  background: var(--bg-card);
+  border-color: var(--mcafee-red);
+  color: var(--mcafee-red);
+}
+
+.mcafee-api-result {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.mcafee-api-error {
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.mcafee-error-message {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-family: monospace;
+}
+
+/* Custom Claims Styles */
+.mcafee-claims-section {
+  display: grid;
+  gap: 30px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.mcafee-claims-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 25px;
+  overflow: hidden;
+}
+
+.mcafee-claims-card pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  overflow-x: auto;
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 15px;
+  background: var(--bg-secondary);
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.mcafee-claims-card pre code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  line-height: 1.4;
+  display: block;
+  max-width: 100%;
+}
+
+.mcafee-claims-card .token-content {
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  line-height: 1.4;
+  padding: 15px;
+  background: var(--bg-secondary);
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+/* MFA Styles */
+.mcafee-mfa-section {
+  display: grid;
+  gap: 30px;
+}
+
+.mcafee-mfa-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.mcafee-mfa-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.mcafee-mfa-enrolled {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+.mcafee-mfa-not-enrolled {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mcafee-page-container {
+    padding: 20px 15px;
+  }
+  
+  .mcafee-page-title {
+    font-size: 2rem;
+  }
+  
+  .mcafee-profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .mcafee-detail-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .mcafee-button-group {
+    flex-direction: column;
+  }
+  
+  .mcafee-button {
+    justify-content: center;
+  }
+}
+
+/* Dark mode styles for token claims */
+.dark-mode .mcafee-claims-card {
+  background: var(--mcafee-dark) !important;
+  border-color: #404040 !important;
+  color: var(--mcafee-white) !important;
+}
+
+.dark-mode .mcafee-claims-card h4 {
+  color: var(--mcafee-white) !important;
+}
+
+.dark-mode .mcafee-claims-card .token-content {
+  background: #1a1a1a !important;
+  color: var(--mcafee-white) !important;
+  border-color: #404040 !important;
+}
+
+.dark-mode .mcafee-claims-card .token-content pre,
+.dark-mode .mcafee-claims-card .token-content code {
+  color: var(--mcafee-white) !important;
+}
+
+/* Fix for any JSON/code content in dark mode */
+.dark-mode pre,
+.dark-mode code {
+  background: #1a1a1a !important;
+  color: var(--mcafee-white) !important;
+  border-color: #404040 !important;
+}
