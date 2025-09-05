@@ -63,6 +63,5 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:mcafee-eng/auth-test-app.git"
-  },
-  "homepage": "https://sturdy-carnival-3jwr1g8.pages.github.io/auth-test-app"
+  }
 }
