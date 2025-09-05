@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/auth-test-app/static/css/main.f30ea17d.chunk.css",
+    "main.js": "/auth-test-app/static/js/main.30386f83.chunk.js",
+    "main.js.map": "/auth-test-app/static/js/main.30386f83.chunk.js.map",
+    "runtime-main.js": "/auth-test-app/static/js/runtime-main.c56b88fe.js",
+    "runtime-main.js.map": "/auth-test-app/static/js/runtime-main.c56b88fe.js.map",
+    "static/js/2.7ce1184d.chunk.js": "/auth-test-app/static/js/2.7ce1184d.chunk.js",
+    "static/js/2.7ce1184d.chunk.js.map": "/auth-test-app/static/js/2.7ce1184d.chunk.js.map",
+    "index.html": "/auth-test-app/index.html",
+    "precache-manifest.6c7b018118e6ba9528117302df60406e.js": "/auth-test-app/precache-manifest.6c7b018118e6ba9528117302df60406e.js",
+    "service-worker.js": "/auth-test-app/service-worker.js",
+    "static/css/main.f30ea17d.chunk.css.map": "/auth-test-app/static/css/main.f30ea17d.chunk.css.map",
+    "static/js/2.7ce1184d.chunk.js.LICENSE.txt": "/auth-test-app/static/js/2.7ce1184d.chunk.js.LICENSE.txt",
+    "static/media/loading.svg": "/auth-test-app/static/media/loading.46709980.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c56b88fe.js",
+    "static/js/2.7ce1184d.chunk.js",
+    "static/css/main.f30ea17d.chunk.css",
+    "static/js/main.30386f83.chunk.js"
+  ]
+}
