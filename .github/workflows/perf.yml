@@ -1,0 +1,55 @@
+name: NODEJS-PERF-DEPLOYMENT
+on:
+
+  workflow_dispatch:
+
+#env:
+#  HOME: "/home/svcacct-githubactions"
+  
+
+jobs:
+  BUILD:
+    runs-on: [self-hosted, Linux, X64, AMI, amazonlinux]
+    steps:
+      - name: Cleaning up the $GITHUB_WORKSPACE
+        run: find /opt/ar1/_w/${{ github.event.repository.name }}/${{ github.event.repository.name }}/. -name . -o -prune -exec rm -rf -- {} + || true
+        
+      - name: Clone-Main-Repository
+        uses: actions/checkout@v2
+        
+      - name: Clone-Template-Repository
+        run: git clone git@github.com:mcafee-eng/GitHubActionsTemplate.git -b master temp/template
+
+      -  name: Extract Branch
+         shell: bash
+         run: echo "##[set-output name=branch;]$(echo  ${GITHUB_REF##*refs/heads/})"
+         id: branch_name
+        
+      - name: Develop-Verify (Pipeline) (Performance)
+        if: (startsWith(steps.branch_name.outputs.branch, 'develop'))
+        uses: "./temp/template/NODEJS/Node-Build/"
+        with:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID}}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
+          # Below values are madantory in case of Docker Build 
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID}}
+          AWS_ECR_REPO: ${{ secrets.AWS_ECR_REPO }}
+          HARNESS_WEBHOOK_URL:  ${{ secrets.HARNESS_PERF_WEBHOOK_URL }}
+          HARNESS_APP_ID: ${{ secrets.HARNESS_PERF_APP_ID }}
+          # Only UnComment those values that need to be used 
+          #Build Type will be having any of two values S3 or Docker
+          Build_TYPE: Docker
+          ENV_IDENTIFIER: perf
+          #Application_Name: ''
+          #Solution_Path:(Optional) 
+          #Solution_Path: ''
+          # Docker_File_Path: Optinal - set to current Working Directory 
+          #Docker_File_Path: ''
+          #Build_Args: '--build-arg ENV=perf'
+          #  Build_Command Optional in case of Docker Build Command default set to-> yarn install; yarn build
+          #  Mutiple commands can be separated by semi-colon(;)
+          #Build_Command: ''
+          #Bucket_Name-(Optional) By default consumer-artifacts
+          #Bucket_Name: 
+          #Docker_File_NAME Optional in case of Docker File Name different then default name i.e. Docker
+    
