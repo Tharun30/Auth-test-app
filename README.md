@@ -4,13 +4,23 @@ This application is hosted at: `git@github.com:mcafee-eng/auth-test-app.git`
 
 This sample demonstrates the integration of [Auth0 React SDK](https://github.com/auth0/auth0-react) into a React application created using [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html). The sample is a companion to the [Auth0 React SDK Quickstart](https://auth0.com/docs/quickstart/spa/react).
 
-This sample demonstrates the following use cases:
+# Auth-test-app
 
-- [Login](https://github.com/auth0-samples/auth0-react-samples/blob/master/Sample-01/src/components/NavBar.js#L72-L79)
-- [Logout](https://github.com/auth0-samples/auth0-react-samples/blob/master/Sample-01/src/components/NavBar.js#L102-L108)
-- [Showing the user profile](https://github.com/auth0-samples/auth0-react-samples/blob/master/Sample-01/src/views/Profile.js)
-- [Protecting routes](https://github.com/auth0-samples/auth0-react-samples/blob/master/Sample-01/src/views/Profile.js#L33)
-- [Calling APIs](https://github.com/auth0-samples/auth0-react-samples/blob/master/Sample-01/src/views/ExternalApi.js)
+A React application for testing authentication features with Auth0 integration.
+
+## Features
+
+- Auth0 authentication integration
+- React Router for navigation  
+- Custom routing at `/auth-test-app` path
+- Responsive design with custom components
+
+This sample demonstrates:
+
+- Logging in to Auth0 using Redirect Mode
+- Accessing user profile information
+- Acquiring and calling an API using Access Tokens
+- Using the Context API to share the authentication state to components
 
 ## Project setup
 
