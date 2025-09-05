@@ -1,0 +1,236 @@
+/* McAfee Theme - Core Color Variables and Brand Guidelines with Dark Mode */
+
+:root {
+  /* McAfee Brand Colors */
+  --mcafee-red: #C8102E;
+  --mcafee-red-gradient: linear-gradient(135deg, #C8102E 0%, #A50E26 100%);
+  --mcafee-red-dark: #A50E26;
+  --mcafee-red-light: #E8445D;
+  
+  /* Light Mode Colors (fallback) */
+  --mcafee-white: #FFFFFF;
+  --mcafee-black: #000000;
+  --mcafee-dark: #1A1D21;
+  
+  /* Light Mode Gray Scale */
+  --mcafee-gray-50: #F8F9FA;
+  --mcafee-gray-100: #E9ECEF;
+  --mcafee-gray-200: #DEE2E6;
+  --mcafee-gray-300: #CED4DA;
+  --mcafee-gray-400: #ADB5BD;
+  --mcafee-gray-500: #868E96;
+  --mcafee-gray-600: #6C757D;
+  --mcafee-gray-700: #495057;
+  --mcafee-gray-800: #343A40;
+  --mcafee-gray-900: #212529;
+  
+  /* Dark Mode Colors */
+  --mcafee-dark-bg-primary: #0F1419;
+  --mcafee-dark-bg-secondary: #1A1D21;
+  --mcafee-dark-bg-tertiary: #2A2E35;
+  --mcafee-dark-bg-card: #1E2328;
+  --mcafee-dark-border: #30363D;
+  --mcafee-dark-border-light: #404854;
+  --mcafee-dark-text-primary: #F0F6FC;
+  --mcafee-dark-text-secondary: #A3A8B8;
+  --mcafee-dark-text-muted: #656D76;
+  
+  /* Semantic Colors */
+  --mcafee-success: #28A745;
+  --mcafee-info: #17A2B8;
+  --mcafee-warning: #FFC107;
+  --mcafee-danger: #DC3545;
+  
+  /* Typography */
+  --mcafee-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --mcafee-font-size-xs: 0.75rem;
+  --mcafee-font-size-sm: 0.875rem;
+  --mcafee-font-size-base: 1rem;
+  --mcafee-font-size-lg: 1.125rem;
+  --mcafee-font-size-xl: 1.25rem;
+  --mcafee-font-size-2xl: 1.5rem;
+  --mcafee-font-size-3xl: 1.875rem;
+  
+  --mcafee-font-weight-normal: 400;
+  --mcafee-font-weight-medium: 500;
+  --mcafee-font-weight-semibold: 600;
+  --mcafee-font-weight-bold: 700;
+  
+  /* Spacing */
+  --mcafee-space-1: 0.25rem;
+  --mcafee-space-2: 0.5rem;
+  --mcafee-space-3: 0.75rem;
+  --mcafee-space-4: 1rem;
+  --mcafee-space-5: 1.25rem;
+  --mcafee-space-6: 1.5rem;
+  --mcafee-space-8: 2rem;
+  --mcafee-space-10: 2.5rem;
+  --mcafee-space-12: 3rem;
+  --mcafee-space-16: 4rem;
+  --mcafee-space-20: 5rem;
+  
+  /* Border Radius */
+  --mcafee-radius-sm: 0.25rem;
+  --mcafee-radius-base: 0.375rem;
+  --mcafee-radius-md: 0.5rem;
+  --mcafee-radius-lg: 0.75rem;
+  --mcafee-radius-xl: 1rem;
+  --mcafee-radius-full: 9999px;
+  
+  /* Shadows */
+  --mcafee-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --mcafee-shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --mcafee-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --mcafee-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --mcafee-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Dark Mode Shadows */
+  --mcafee-dark-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --mcafee-dark-shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --mcafee-dark-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --mcafee-dark-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --mcafee-dark-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+  
+  /* Transitions */
+  --mcafee-transition-fast: 150ms ease-in-out;
+  --mcafee-transition-base: 200ms ease-in-out;
+  --mcafee-transition-slow: 300ms ease-in-out;
+  
+  /* Z-Index */
+  --mcafee-z-dropdown: 1000;
+  --mcafee-z-sticky: 1020;
+  --mcafee-z-fixed: 1030;
+  --mcafee-z-modal-backdrop: 1040;
+  --mcafee-z-modal: 1050;
+  --mcafee-z-popover: 1060;
+  --mcafee-z-tooltip: 1070;
+}
+
+/* Base Theme Application - Default to Dark Mode */
+* {
+  box-sizing: border-box;
+}
+
+/* Default Dark Mode (enabled by default) */
+:root,
+html,
+html.dark-mode,
+.dark-mode {
+  /* Primary theme colors for dark mode */
+  --bg-primary: var(--mcafee-dark-bg-primary);
+  --bg-secondary: var(--mcafee-dark-bg-secondary);
+  --bg-tertiary: var(--mcafee-dark-bg-tertiary);
+  --bg-card: var(--mcafee-dark-bg-card);
+  --border-color: var(--mcafee-dark-border);
+  --border-light: var(--mcafee-dark-border-light);
+  --text-primary: var(--mcafee-dark-text-primary);
+  --text-secondary: var(--mcafee-dark-text-secondary);
+  --text-muted: var(--mcafee-dark-text-muted);
+  
+  /* Shadows for dark mode */
+  --shadow-sm: var(--mcafee-dark-shadow-sm);
+  --shadow-base: var(--mcafee-dark-shadow-base);
+  --shadow-md: var(--mcafee-dark-shadow-md);
+  --shadow-lg: var(--mcafee-dark-shadow-lg);
+  --shadow-xl: var(--mcafee-dark-shadow-xl);
+}
+
+/* Light Mode Override */
+.light-mode,
+html.light-mode,
+html.light-mode body {
+  /* Primary theme colors for light mode */
+  --bg-primary: var(--mcafee-white);
+  --bg-secondary: var(--mcafee-gray-50);
+  --bg-tertiary: var(--mcafee-gray-100);
+  --bg-card: var(--mcafee-white);
+  --border-color: var(--mcafee-gray-300);
+  --border-light: var(--mcafee-gray-200);
+  --text-primary: var(--mcafee-gray-900);
+  --text-secondary: var(--mcafee-gray-700);
+  --text-muted: var(--mcafee-gray-600);
+  
+  /* Shadows for light mode */
+  --shadow-sm: var(--mcafee-shadow-sm);
+  --shadow-base: var(--mcafee-shadow-base);
+  --shadow-md: var(--mcafee-shadow-md);
+  --shadow-lg: var(--mcafee-shadow-lg);
+  --shadow-xl: var(--mcafee-shadow-xl);
+}
+
+body {
+  font-family: var(--mcafee-font-family);
+  font-size: var(--mcafee-font-size-base);
+  font-weight: var(--mcafee-font-weight-normal);
+  line-height: 1.5;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--mcafee-transition-base), color var(--mcafee-transition-base);
+}
+
+/* Utility Classes */
+.mcafee-text-red {
+  color: var(--mcafee-red);
+}
+
+.mcafee-text-gradient {
+  background: var(--mcafee-red-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mcafee-bg-red {
+  background-color: var(--mcafee-red);
+}
+
+.mcafee-bg-gradient {
+  background: var(--mcafee-red-gradient);
+}
+
+.mcafee-border-red {
+  border-color: var(--mcafee-red);
+}
+
+/* Theme-aware utility classes */
+.theme-bg-primary {
+  background-color: var(--bg-primary);
+}
+
+.theme-bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.theme-bg-card {
+  background-color: var(--bg-card);
+}
+
+.theme-text-primary {
+  color: var(--text-primary);
+}
+
+.theme-text-secondary {
+  color: var(--text-secondary);
+}
+
+.theme-text-muted {
+  color: var(--text-muted);
+}
+
+.theme-border {
+  border-color: var(--border-color);
+}
+
+/* Focus States */
+.mcafee-focus:focus {
+  outline: 2px solid var(--mcafee-red);
+  outline-offset: 2px;
+}
+
+.mcafee-focus-ring:focus {
+  box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.1);
+}

@@ -1,0 +1,59 @@
+/* Import McAfee Design System */
+@import './styles/mcafee-theme.css';
+@import './styles/layout.css';
+@import './styles/navbar.css';
+@import './styles/components.css';
+
+/* Custom Dark Mode Scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #555 #2c3e50;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+  border: 1px solid var(--bg-primary);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+*::-webkit-scrollbar-corner {
+  background: var(--bg-primary);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--mcafee-font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+code {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+/* Global resets for full-width layout */
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
