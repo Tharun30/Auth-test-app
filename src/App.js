@@ -61,8 +61,8 @@ const App = () => {
         <NavBar />
         <div className="app-content">
           <Switch>
-            {/* Show Home component with customizations at /auth-test-app */}
-            <Route path="/auth-test-app" exact component={Home} />
+            {/* Show Home component with customizations at root path */}
+            <Route path="/" exact component={Home} />
             <Route path="/home" component={Home} />
             <Route path="/profile" component={Profile} />
             <Route path="/external-api" component={ExternalApi} />

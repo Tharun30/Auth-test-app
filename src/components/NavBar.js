@@ -96,7 +96,7 @@ const NavBar = (props) => {
   return (
     <div className="mcafee-navbar">
       <div className="mcafee-navbar-container">
-        <Link to="/auth-test-app" className="mcafee-logo">
+        <Link to="/" className="mcafee-logo">
           Auth Test App
         </Link>
         
