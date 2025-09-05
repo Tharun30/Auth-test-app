@@ -1,0 +1,27 @@
+name: Scans
+on:  
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - 'develop'
+      
+jobs:
+  BUILD:
+    runs-on: [self-hosted, Linux, X64,Scans]
+    steps:
+      - name: Cleaning up the $GITHUB_WORKSPACE 
+        run: find /opt/ar1/_w/${{ github.event.repository.name }}/${{ github.event.repository.name }}/. -name . -o -prune -exec rm -rf -- {} + || true
+        
+      - name: Clone-Main-Repository
+        uses: actions/checkout@v2
+        
+      - name: Clone-Template-Repository
+        run: git clone git@github.com:mcafee-eng/GitHubActionsTemplate.git -b master temp/template
+            
+      - name: Scans
+        uses: "./temp/template/NODEJS/Scan/"
+        #with:
+          #Solution_Path: ""
+         
+
+          
